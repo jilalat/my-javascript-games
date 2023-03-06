@@ -4,4 +4,4 @@ const pug = require("gulp-pug");
 exports.compileHTML = () =>
   src("src/pages/**/*.pug")
     .pipe(pug({ pretty: true }))
-    .pipe(dest("dist"));
+    .pipe(dest("docs"));

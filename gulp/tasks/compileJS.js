@@ -13,4 +13,4 @@ exports.compileJS = () =>
         noSource: true,
       })
     )
-    .pipe(dest("dist"));
+    .pipe(dest("docs"));

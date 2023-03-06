@@ -5,4 +5,4 @@ exports.copyImgs = () =>
   src("src/assets/img/*.*")
   // .pipe(minImgs())
   // .pipe(imagemin({ optimizationLevel: 5 }))
-  .pipe(dest("dist/images/"));
+  .pipe(dest("docs/images/"));

@@ -6,4 +6,4 @@ exports.compileCSS = () =>
   src(["src/assets/scss/style.scss", "src/assets/libs/*.scss"])
     .pipe(sass())
     .pipe(cleanCss())
-    .pipe(dest("dist/style"));
+    .pipe(dest("docs/style"));

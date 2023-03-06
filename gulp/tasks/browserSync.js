@@ -3,10 +3,10 @@ const { watch } = require("gulp");
 
 exports.browserSyncInit = (done) => {
   browserSync.init({
-    server: "./dist",
+    server: "./docs",
     port: 9000,
   });
-  watch(["./dist/**/*", "./dist/style/**/*.css"]).on(
+  watch(["./docs/**/*", "./docs/style/**/*.css"]).on(
     "change",
     browserSync.reload
   );
