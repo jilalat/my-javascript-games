@@ -1,0 +1,34 @@
+// @mixin LinesLimit($lines) {
+//   display: -webkit-box;
+//   -webkit-line-clamp: $lines;
+//   -webkit-box-orient: vertical;
+//   overflow: hidden;
+// }
+
+// @mixin fonts($fontFamily, $fileName, $fontWeight) {
+//   font-family: $fontFamily;
+//   src: url("../fonts/" + $fileName + ".woff2") format("woff2"),
+//     url("../fonts/" + $fileName + ".woff") format("woff"),
+//     url("../fonts/" + $fileName + ".ttf") format("ttf"),
+//     url("../fonts/" + $fileName + ".eot") format("eot"),
+//     url("../fonts/" + $fileName + ".svg") format("svg");
+//   font-weight: $fontWeight;
+// }
+
+// @mixin maxScreen($value) {
+//   @media only screen and (max-width: ($value + "px")) {
+//     @content;
+//   }
+// }
+
+// @mixin minScreen($value) {
+//   @media only screen and (min-width: ($value + "px")) {
+//     @content;
+//   }
+// }
+
+// @mixin btwnScreen($value1, $value2) {
+//   @media only screen and (max-width: ($value1 + "px")) and (min-width: ($value2 + "px")) {
+//     @content;
+//   }
+// }

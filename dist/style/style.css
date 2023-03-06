@@ -1,0 +1,1 @@
+*{margin:0;padding:0;box-sizing:border-box}body{overflow-x:hidden;width:100vw}main{background:rgba(0,255,255,.2);display:flex;justify-content:center;align-items:center;width:100%;flex-direction:column}h1{width:fit-content;background:#0ff}a{font-size:48px;font-weight:600;text-decoration:none;color:red}.slide{height:16.6666666667vh;width:100vw;border-top:1px solid #000}

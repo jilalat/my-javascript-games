@@ -1,0 +1,31 @@
+// $regions: afrique, ameriqueLatine, ameriqueDuNord, asie, europe, orient,
+//   pacifique;
+
+// // @each $region in $regions {
+// //   ##{$region} ~ .tabs-content > .#{$region} {
+// //     opacity: 0;
+// //   }
+// //   ##{$region}:checked ~ .tabs-content > .#{$region} {
+// //     opacity: 1;
+// //   }
+// // }
+
+// $styles: circuitsAccompagnes, decouvertesPrivees, roadtrip, croisieres, sejours;
+// @each $style in $styles {
+//   ##{$style} ~ .tabs-content > .#{$style} {
+//     display: none;
+//   }
+//   ##{$style}:checked ~ .tabs-content > .#{$style} {
+//     display: grid;
+//   }
+// }
+
+// $proInfos: enDetails, bonASavoir, datesEtTaris, infosPratiques;
+// @each $proInfo in $proInfos {
+//   ##{$proInfo} ~ .tabs-content > .#{$proInfo} {
+//     display: none;
+//   }
+//   ##{$proInfo}:checked ~ .tabs-content > .#{$proInfo} {
+//     display: block;
+//   }
+// }

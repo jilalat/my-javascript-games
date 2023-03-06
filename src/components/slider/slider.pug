@@ -1,0 +1,5 @@
+include ./slidesList
+.slider
+    each slide in slidesList
+        .slide
+            a(href=slide.href, target="_blank") #{slide.name}
