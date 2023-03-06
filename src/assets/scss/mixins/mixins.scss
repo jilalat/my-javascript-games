@@ -15,20 +15,20 @@
 //   font-weight: $fontWeight;
 // }
 
-// @mixin maxScreen($value) {
-//   @media only screen and (max-width: ($value + "px")) {
-//     @content;
-//   }
-// }
+@mixin maxScreen($value) {
+  @media only screen and (max-width: ($value + "px")) {
+    @content;
+  }
+}
 
-// @mixin minScreen($value) {
-//   @media only screen and (min-width: ($value + "px")) {
-//     @content;
-//   }
-// }
+@mixin minScreen($value) {
+  @media only screen and (min-width: ($value + "px")) {
+    @content;
+  }
+}
 
-// @mixin btwnScreen($value1, $value2) {
-//   @media only screen and (max-width: ($value1 + "px")) and (min-width: ($value2 + "px")) {
-//     @content;
-//   }
-// }
+@mixin btwnScreen($value1, $value2) {
+  @media only screen and (max-width: ($value1 + "px")) and (min-width: ($value2 + "px")) {
+    @content;
+  }
+}

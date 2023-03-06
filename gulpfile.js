@@ -1,4 +1,4 @@
-const { dev } = require("./gulp/tasks/development");
+const { dev } = require("./gulp/development");
 
 module.exports = {
   dev

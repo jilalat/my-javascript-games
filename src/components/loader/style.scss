@@ -1,0 +1,82 @@
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: $light-green-color;
+  color: $dark-green-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  transition: all 0.7s ease-in-out;
+}
+.progress-bar-wrapper {
+  position: relative;
+  width: 500px;
+  color: $dark-green-color;
+  &::before,
+  &::after {
+    transition: all 0.3s ease-in-out;
+    font-size: 32px;
+    position: absolute;
+    left: 50%;
+    width: fit-content;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+  &::before {
+    content: attr(data-status);
+    top: 50%;
+    z-index: 10;
+  }
+  &::after {
+    content: attr(data-percentage) '\00a0''%';
+    top: 50%;
+    opacity: 0;
+  }
+  &.in-progress {
+    &::before {
+      top: -50%;
+    }
+    &::after {
+      opacity: 1;
+      top: 150%;
+    }
+    @include maxScreen(640) {
+      width: 75vw;
+    }
+  }
+  @include maxScreen(640) {
+    width: 75vw;
+  }
+}
+.progress-bar {
+  border-radius: 25px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.start-button {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: $white-color;
+}
+.progress {
+  pointer-events: none;
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  background-color: $dark-green-color;
+  border-radius: 25px;
+  transition: all 3s ease-in-out;
+  width: 10%;
+  left: 0;
+  top: 0;
+  @include maxScreen(640) {
+    width: 20%;
+  }
+}
