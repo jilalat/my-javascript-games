@@ -1,48 +1,43 @@
 let progressBarWrapper = document.querySelector('.progress-bar-wrapper');
 let startButton = document.querySelector('.start-button');
-let notReadyBtn = document.querySelector('.not-ready');
 let progress = document.querySelector('.progress');
 
-let counter = 0;
-const maxCounter = 100;
-const seconds = 1.6;
-const interval = (seconds * 1000) / maxCounter;
-let loadTime = 500;
-let progressTime = loadTime + 3000;
-let timeToStart = progressTime + 100;
+let minCounter = 0;
+const MAX_COUNTER = 100;
+const SECONDS = 1.6;
+const INTERVAL = (SECONDS * 1000) / MAX_COUNTER;
+const LOAD_TIME = 700;
+const PROGRESS_TIME = LOAD_TIME + 3000;
+const TIME_TO_START = PROGRESS_TIME + 100;
 
 window.addEventListener('load', () => {
   setTimeout(() => {
     progressBarWrapper.classList.add('in-progress');
-    progress.style.width = '100%';
-    const loop = setInterval(function () {
-      progressBarWrapper.setAttribute('data-percentage', counter);
-      if (counter === maxCounter) {
-        stopLoop();
-      }
-      counter++;
-    }, interval);
-
-    function stopLoop() {
-      clearInterval(loop);
-    }
-  }, loadTime);
+    progress.classList.add('show');
+    const progressBarCounter = () => {
+      progressBarWrapper.setAttribute('data-percentage', minCounter++);
+      minCounter > MAX_COUNTER && stopCounter();
+    };
+    const counter = setInterval(progressBarCounter, INTERVAL);
+    const stopCounter = () => {
+      clearInterval(counter);
+    };
+  }, LOAD_TIME);
 });
 setTimeout(() => {
   progressBarWrapper.classList.remove('in-progress');
   startButton.classList.remove('not-ready');
-  progressBarWrapper.style.color = '#fff';
-  progressBarWrapper.style.width = '250px';
-}, progressTime);
+  progressBarWrapper.classList.add('white-color');
+}, PROGRESS_TIME);
 setTimeout(() => {
   progressBarWrapper.setAttribute('data-status', 'Start');
-}, timeToStart);
+}, TIME_TO_START);
 
 startButton.addEventListener('click', () => {
   if (!startButton.classList.contains('not-ready')) {
-    startButton.closest('.loader').style.opacity = '0';
+    startButton.closest('.loader').classList.add('remove');
     setTimeout(() => {
       startButton.closest('.loader').remove();
-    }, 700);
+    }, LOAD_TIME);
   }
 });

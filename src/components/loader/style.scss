@@ -10,11 +10,15 @@
   position: absolute;
   top: 0;
   transition: all 0.7s ease-in-out;
+  &.remove {
+    opacity: 0;
+  }
 }
 .progress-bar-wrapper {
   position: relative;
-  width: 500px;
+  width: 250px;
   color: $dark-green-color;
+  transition: all 0.5s ease-in-out;
   &::before,
   &::after {
     transition: all 0.3s ease-in-out;
@@ -36,6 +40,7 @@
     opacity: 0;
   }
   &.in-progress {
+    width: 500px;
     &::before {
       top: -50%;
     }
@@ -47,8 +52,11 @@
       width: 75vw;
     }
   }
+  &.white-color {
+    color: $white-color;
+  }
   @include maxScreen(640) {
-    width: 75vw;
+    width: 55vw;
   }
 }
 .progress-bar {
@@ -70,13 +78,13 @@
   display: inline-block;
   position: absolute;
   height: 100%;
+  width: 100%;
   background-color: $dark-green-color;
   border-radius: 25px;
   transition: all 3s ease-in-out;
-  width: 10%;
-  left: 0;
+  left: -100%;
   top: 0;
-  @include maxScreen(640) {
-    width: 20%;
+  &.show {
+    left: 0;
   }
 }
